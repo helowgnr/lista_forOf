@@ -6,11 +6,22 @@
     //Apresente apenas os números pares. Apresente também a quantidade de números pares que existem e apresente a quantidade de elementos da lista original.
 
     //ENTRADA
-
+    let listaDeItens = [1, "João", "Eduardo", "Joice", 3, 5, 6, 8, "Maria", 5.6, 10];
 
     //PROCESSAMENTO
+    let numerosP = [];
+    let qntdNumerosP = [];
 
+    for (let item of listaDeItens) {
+        if (typeof item === "number" && item % 2 === 0) {
+            numerosP.push(item);
+            qntdNumerosP++;
+        }
+    }
+    let qntdTotal = listaDeItens.length;
 
     //SAÍDA
-
+    alert (`números pares: ${numerosP}.`);
+    alert (`quantidade de números pares: ${qntdNumerosP}.`);
+    alert (`quantidade total de elementos da lista: ${qntdTotal}.`);
 </script>
